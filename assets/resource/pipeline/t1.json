@@ -36,8 +36,7 @@
         ],
         "action": "Click",
         "next": [
-            "存档覆盖",
-            "无"
+            "存档覆盖"
         ],
         "on_error": [
             "无"
@@ -51,7 +50,7 @@
             "确定"
         ],
         "action": "Click",
-        "focus": "[color:darkgray]成功进入游戏！[/color]",
+        "focus": "[color:darkgray]成功进入游戏！[/color]"
     },
     "无": {
         "focus": "[color:darkgray]成功进入游戏！[/color]"
