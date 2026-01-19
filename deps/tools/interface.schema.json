@@ -292,6 +292,15 @@
                     "description": "是否使用原始分辨率进行截图，不进行缩放。与缩放分辨率设置互斥",
                     "default": false
                 },
+<<<<<<< HEAD
+=======
+                "permission_required": {
+                    "type": "boolean",
+                    "title": "需要管理员权限",
+                    "description": "该控制器是否需要以管理员权限运行（例如某些 Win32 输入方式需要更高权限）。不设置则默认为 false",
+                    "default": false
+                },
+>>>>>>> 788cd1b496e65c8b33b8e4e296e28dcba75989c1
                 "adb": {
                     "type": "object",
                     "title": "Adb 控制器配置",
@@ -535,6 +544,17 @@
                         "type": "string"
                     }
                 },
+<<<<<<< HEAD
+=======
+                "controller": {
+                    "type": "array",
+                    "title": "支持的控制器",
+                    "description": "指定该任务支持的控制器类型列表。数组元素应与 controller 配置中的 name 字段对应。若不指定，则表示该任务在所有控制器类型中都可用",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+>>>>>>> 788cd1b496e65c8b33b8e4e296e28dcba75989c1
                 "pipeline_override": {
                     "$ref": "#/definitions/pipelineOverride",
                     "title": "Pipeline 覆盖",
