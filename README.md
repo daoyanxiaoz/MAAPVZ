@@ -46,6 +46,7 @@
 
 5. 完成开发后，上传您的代码并发布版本。
 1
+
     ```bash
     # 配置 git 信息（仅第一次需要，后续不用再配置）
     git config user.name "您的 GitHub 昵称"
@@ -112,6 +113,6 @@ Win10 或者 Win11 系统自带了一份 "Python"，但它其实只是一个安�
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
 
-感谢以下开发者对本项目作出的贡献（下面链接改成你自己的项目地址）:
+感谢以下开发者对本项目作出的贡献:
 
-[![Contributors](https://contrib.rocks/image?repo=MaaXYZ/MaaFramework&max=1000)](https://github.com/MaaXYZ/MaaFramework/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=daoyanxiaoz/MAAPVZ)](https://github.com/daoyanxiaoz/MAAPVZ/graphs/contributors)
