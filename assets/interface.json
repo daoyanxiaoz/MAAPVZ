@@ -38,9 +38,16 @@
     ],
     "resource": [
         {
-            "name": "官服",
+            "name": "4399", //更改
             "path": [
                 "./resource"
+            ]
+        },
+        {
+            "name": "小米渠道服", //添加
+            "path": [
+                "./resource",
+                "./resource_XiaoMi"
             ]
         }
         // {
@@ -60,8 +67,20 @@
     // },
     "task": [
         {
-            "name": "开始登录",
-            "entry": "打开pvz"
+            "name": "开始登录_4399",
+            "entry": "打开pvz_4399",
+            "resource": [
+                "4399"
+            ],
+            "description": "仅在4399资源包中可用的活动任务"
+        },
+        {
+            "name": "开始登录_XM",
+            "entry": "打开pvz_XM",
+            "resource": [
+                "小米渠道服"
+            ],
+            "description": "仅在小米渠道服资源包中可用的活动任务"
         },
         {
             "name": "签到",

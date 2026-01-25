@@ -1,7 +1,7 @@
 {
-    "打开pvz_4399": {
+    "打开pvz_XM": {
         "action": "StartApp",
-        "package": "com.popcap.pvz2cthd4399",
+        "package": "com.popcap.pvz2cthdxm",
         "next": [
             "点击登录"
         ]
