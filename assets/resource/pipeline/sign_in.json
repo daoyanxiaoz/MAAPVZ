@@ -1,6 +1,6 @@
 {
     "签到": {
-        "timeout": 300,
+        "timeout": 10000,
         "action": "DoNothing",
         "pre_delay": 0,
         "post_delay": 0,
@@ -14,12 +14,12 @@
         ]
     },
     "执行签到": {
-        "recognition": "OCR",
-        "expected": [
-            "签到"
+        "recognition": "TemplateMatch",
+        "template": [
+            "签到.png"
         ],
+        "pre_wait_freezes": 3000,
         "action": "Click",
-        "pre_delay": 6000,
         "next": [
             "返回主界面"
         ]
