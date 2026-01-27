@@ -18,8 +18,6 @@
             "主界面特征.png"
         ],
         "action": "DoNothing",
-        "pre_delay": 0,
-        "post_delay": 0,
         "max_hit": 3,
         "inverse": true,
         "next": [
