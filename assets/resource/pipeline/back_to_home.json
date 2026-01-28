@@ -17,6 +17,9 @@
         "template": [
             "主界面特征.png"
         ],
+        "threshold": [
+            1
+        ],
         "action": "DoNothing",
         "max_hit": 3,
         "inverse": true,

@@ -1,5 +1,5 @@
 {
-    "签到": {
+    "签到_前置检查": {
         "timeout": 10000,
         "action": "DoNothing",
         "max_hit": 3,
