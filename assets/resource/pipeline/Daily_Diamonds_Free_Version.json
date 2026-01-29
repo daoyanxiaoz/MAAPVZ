@@ -43,8 +43,10 @@
             "领取钻石.png"
         ],
         "threshold": [
-            0.6
+            0.5
         ],
+        "max_hit": 5,
+        "method": 10001,
         "action": "Click",
         "target": [
             329,
