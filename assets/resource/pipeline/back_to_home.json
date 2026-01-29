@@ -20,6 +20,7 @@
         "threshold": [
             1
         ],
+        "method": 10001, //修改了算法匹配模板，增加对光照鲁棒性的要求
         "action": "DoNothing",
         "max_hit": 3,
         "inverse": true,
