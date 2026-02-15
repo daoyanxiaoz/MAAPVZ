@@ -12,7 +12,7 @@
         "timeout": 30000,
         "recognition": "TemplateMatch",
         "template": [
-            "登录.png"
+            "登录_XM.png"
         ],
         "pre_wait_freezes": {
             "time": 1000, // 需要连续2秒画面无变化

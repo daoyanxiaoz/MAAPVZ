@@ -8,11 +8,21 @@
             "点击登录"
         ]
     },
+    "打开pvz_XM": {
+        "timeout": 180000,
+        "action": "StartApp",
+        "package": "com.popcap.pvz2cthdxm",
+        "post_delay": 13000,
+        "next": [
+            "点击登录"
+        ]
+    },
     "点击登录": {
         "timeout": 30000,
         "recognition": "TemplateMatch",
         "template": [
-            "登录_4399.png"
+            "登录_4399.png",
+            "登录_XM.png"
         ],
         "pre_wait_freezes": {
             "time": 1000, // 需要连续2秒画面无变化
