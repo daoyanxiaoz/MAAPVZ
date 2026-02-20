@@ -38,16 +38,9 @@
     ],
     "resource": [
         {
-            "name": "4399", //更改
+            "name": "PVZ_2_国服通用", //更改
             "path": [
                 "./resource"
-            ]
-        },
-        {
-            "name": "小米渠道服", //添加
-            "path": [
-                "./resource",
-                "./resource_XiaoMi"
             ]
         }
         // {
@@ -65,22 +58,21 @@
     //         "./agent/main.py"
     //     ]
     // },
+    "import": [
+        "plants_explore_team.json",
+        "plants_explore_debris.json"
+    ],
     "task": [
         {
-            "name": "开始登录_4399",
-            "entry": "打开pvz_4399",
-            "resource": [
-                "4399"
+            "name": "开始登录",
+            "entry": "选择渠道服",
+            "option": [
+                "渠道服"
             ],
-            "description": "仅在4399资源包中可用的活动任务"
-        },
-        {
-            "name": "开始登录_XM",
-            "entry": "打开pvz_XM",
             "resource": [
-                "小米渠道服"
+                "PVZ_2_国服通用"
             ],
-            "description": "仅在小米渠道服资源包中可用的活动任务"
+            "description": "打开模拟器后开始"
         },
         {
             "name": "签到",
@@ -94,7 +86,10 @@
             "name": "植物探险",
             "entry": "植物探险_前置检查",
             "option": [
-                "选择植物"
+                "探索第一队",
+                "探索第二队",
+                "探索第三队",
+                "探索第四队"
             ]
         }
         // {
@@ -111,27 +106,26 @@
         // }
     ],
     "option": {
-        "选择植物": {
-            "type": "select", //有“select（多选一）”,“switch（二选一）”,“input(输入)”三种形式
-            "label": "选择植物", //标识符，不写默认为”name“中的字符串，“$”表示国际化
-            "description": "选择要探索的植物", //详细信息解释
+        "渠道服": {
+            "type": "select",
+            "description": "选择你要进入的渠道服",
             "cases": [
                 {
-                    "name": "豌豆射手",
+                    "name": "4399",
                     "pipeline_override": {
-                        "探索": {
+                        "选择渠道服": {
                             "next": [
-                                "探索_豌豆射手"
+                                "打开pvz_4399"
                             ]
                         }
                     }
                 },
                 {
-                    "name": "向日葵",
+                    "name": "小米",
                     "pipeline_override": {
-                        "探索": {
+                        "选择渠道服": {
                             "next": [
-                                "探索_向日葵" //等等，select似乎完成选择多个植物，先写在这，后面我再想一下
+                                "打开pvz_XM"
                             ]
                         }
                     }
@@ -139,6 +133,9 @@
             ]
         }
     }
+    // "type": "select", //有“select（多选一）”,“switch（二选一）”,“input(输入)”三种形式
+    // "label": "选择植物", //标识符，不写默认为”name“中的字符串，“$”表示国际化
+    // "description": "选择要探索的植物", //详细信息解释
     // "option": {
     //     "任务选项1": {
     //         "cases": [

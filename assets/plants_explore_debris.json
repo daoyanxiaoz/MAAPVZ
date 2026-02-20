@@ -1,0 +1,70 @@
+{
+    "option": {
+        "植物探险_豌豆射手碎片": {
+            "type": "switch",
+            "label": "豌豆射手碎片",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "探索_豌豆射手": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "探索_豌豆射手": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "植物探险_卷心菜投手碎片": {
+            "type": "switch",
+            "label": "卷心菜投手碎片",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "探索_卷心菜投手": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "探索_卷心菜投手": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "植物探险_向日葵碎片": {
+            "type": "switch",
+            "label": "向日葵碎片",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "探索_向日葵": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "探索_向日葵": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
