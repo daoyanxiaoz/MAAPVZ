@@ -3,6 +3,7 @@
         "植物探险_豌豆射手碎片": {
             "type": "switch",
             "label": "豌豆射手碎片",
+            "default_case": false,
             "cases": [
                 {
                     "name": "Yes",
@@ -25,6 +26,7 @@
         "植物探险_卷心菜投手碎片": {
             "type": "switch",
             "label": "卷心菜投手碎片",
+            "default_case": false,
             "cases": [
                 {
                     "name": "Yes",
@@ -47,6 +49,7 @@
         "植物探险_向日葵碎片": {
             "type": "switch",
             "label": "向日葵碎片",
+            "default_case": false,
             "cases": [
                 {
                     "name": "Yes",
