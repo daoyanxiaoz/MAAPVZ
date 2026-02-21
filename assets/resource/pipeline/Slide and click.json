@@ -1,6 +1,6 @@
 {
     "滑动": {
-        "timeout": 4000,
+        "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
         "begin": [
@@ -20,7 +20,7 @@
         ]
     },
     "滑动2": {
-        "timeout": 4000,
+        "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
         "begin": [
@@ -40,7 +40,7 @@
         ]
     },
     "滑动3": {
-        "timeout": 4000,
+        "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
         "begin": [
@@ -60,7 +60,7 @@
         ]
     },
     "滑动4": {
-        "timeout": 4000,
+        "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
         "begin": [
@@ -80,7 +80,7 @@
         ]
     },
     "滑动5": {
-        "timeout": 4000,
+        "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
         "begin": [
@@ -100,7 +100,7 @@
         ]
     },
     "滑动6": {
-        "timeout": 4000,
+        "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
         "begin": [
@@ -120,7 +120,7 @@
         ]
     },
     "滑动7": {
-        "timeout": 4000,
+        "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
         "begin": [
@@ -140,7 +140,7 @@
         ]
     },
     "滑动8": {
-        "timeout": 4000,
+        "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
         "begin": [
@@ -192,6 +192,63 @@
             469,
             1,
             1
+        ]
+    },
+    "滑回最顶上": {
+        "timeout": 4000,
+        "max_hit": 1,
+        "action": "Swipe",
+        "begin": [
+            311,
+            181,
+            1,
+            1
+        ],
+        "end": [
+            299,
+            592,
+            1,
+            1
+        ]
+    },
+    "自动选择": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "自动选择.png"
+        ],
+        "action": "Click",
+        "next": [
+            "开始探险"
+        ]
+    },
+    "开始探险": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "开始探险.png"
+        ],
+        "action": "Click",
+        "on_error": []
+    },
+    "点击_海盗/埃及": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "海盗埃及（灰色）.png"
+        ],
+        "threshold": [
+            0.9
+        ],
+        "action": "Click"
+    },
+    "豌豆射手_开始": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "开始.png"
+        ],
+        "order_by": "Horizontal", //排序方式
+        "index": 0,
+        "action": "Click",
+        "next": [
+            "自动选择"
         ]
     }
 }

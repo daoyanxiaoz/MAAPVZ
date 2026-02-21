@@ -41,14 +41,15 @@
     "检查_海盗/埃及": {
         "recognition": "TemplateMatch",
         "template": [
-            "海盗埃及.png"
+            "海盗埃及.png",
+            "海盗埃及（灰色）.png"
         ],
         "action": "Click",
         "next": [
             "[JumpBack]点击探险完成",
             "[JumpBack]滑动",
             "检查_西部/功夫"
-        ],
+        ]
         // "on_error": [
         //     "滑动"
         // ]
@@ -173,7 +174,6 @@
         ]
     },
     //先检查一遍再找对应世界再找对应植物
-    "检查完成": {},
     "点击探险完成": {
         "recognition": "TemplateMatch",
         "template": [
@@ -193,6 +193,13 @@
             "探险完成_确定.png"
         ],
         "action": "Click"
+    },
+    "检查完成": {
+        "focus": "[color:darkgray]植物探险检查完成！[/color]",
+        "next": [
+            "[JumpBack]滑回最顶上",
+            "探索"
+        ]
     },
     "探索": {
         "next": [
@@ -238,6 +245,10 @@
     },
     "探索_豌豆射手": {
         "enabled": false,
+        "next": [
+            "[JumpBack]点击_海盗/埃及",
+            "豌豆射手_开始"
+        ]
     },
     "探索_卷心菜投手": {
         "enabled": false,
