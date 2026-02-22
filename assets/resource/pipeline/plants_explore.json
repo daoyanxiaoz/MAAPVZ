@@ -263,43 +263,14 @@
     "探索_豌豆射手世界页面": {
         "action": "DoNothing",
         "next": [
-            "探索_豌豆射手选择世界"
-        ]
-    },
-    "探索_豌豆射手选择世界": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "海盗埃及.png",
-            "海盗埃及（灰色）.png"
-        ],
-        "action": "Click",
-        "pre_delay": 500,
-        "post_delay": 500,
-        "next": [
+            "[JumpBack]探索_海盗/埃及",
             "探索_豌豆射手页面"
         ]
     },
     "探索_豌豆射手页面": {
         "action": "DoNothing",
         "next": [
-            "探索_豌豆射手区域"
-        ]
-    },
-    "探索_豌豆射手区域": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "开始.png"
-        ],
-        "roi": [
-            387,
-            171,
-            654,
-            153
-        ],
-        "action": "Click",
-        "post_delay": 500,
-        "next": [
-            "自动选择"
+            "探索_选择第一个植物"
         ]
     },
     "探索_卷心菜投手": {

@@ -252,6 +252,33 @@
         "action": "Click",
         "on_error": []
     },
+    "探索_海盗/埃及": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "海盗埃及.png",
+            "海盗埃及（灰色）.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
+    },
+    "探索_选择第一个植物": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "开始.png"
+        ],
+        "roi": [
+            387,
+            171,
+            654,
+            153
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "自动选择"
+        ]
+    },
     "豌豆射手_开始": {
         "recognition": "TemplateMatch",
         "template": [
