@@ -19,6 +19,7 @@
         "post_delay": 13000,
         "next": [
             "小米的广告",
+            "小米_下次再说",
             "点击登录"
         ]
     },
@@ -31,7 +32,21 @@
         "action": "Click",
         "post_delay": 10000,
         "next": [
-            "点击登录"
+            "点击登录",
+            "小米_下次再说"
+        ]
+    },
+    "小米_下次再说": {
+        "timeout": 150000,
+        "recognition": "TemplateMatch",
+        "template": [
+            "小米里的绑定账号_下次再说.png"
+        ],
+        "action": "Click",
+        "post_delay": 10000,
+        "next": [
+            "点击登录",
+            "小米的广告"
         ]
     },
     "点击登录": {

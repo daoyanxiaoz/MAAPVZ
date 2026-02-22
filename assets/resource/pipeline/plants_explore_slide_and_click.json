@@ -3,6 +3,7 @@
         "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
+        "post_delay": 200,
         "begin": [
             402,
             628,
@@ -23,6 +24,7 @@
         "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
+        "post_delay": 200,
         "begin": [
             402,
             628,
@@ -43,6 +45,7 @@
         "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
+        "post_delay": 200,
         "begin": [
             402,
             628,
@@ -63,6 +66,7 @@
         "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
+        "post_delay": 200,
         "begin": [
             402,
             628,
@@ -83,6 +87,7 @@
         "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
+        "post_delay": 200,
         "begin": [
             402,
             628,
@@ -103,6 +108,7 @@
         "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
+        "post_delay": 200,
         "begin": [
             402,
             628,
@@ -111,7 +117,7 @@
         ],
         "end": [
             407,
-            108,
+            308,
             1,
             1
         ],
@@ -123,6 +129,7 @@
         "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
+        "post_delay": 200,
         "begin": [
             402,
             628,
@@ -131,7 +138,7 @@
         ],
         "end": [
             407,
-            108,
+            308,
             1,
             1
         ],
@@ -143,6 +150,7 @@
         "timeout": 2000,
         "max_hit": 1,
         "action": "Swipe",
+        "post_delay": 200,
         "begin": [
             402,
             628,
@@ -151,7 +159,7 @@
         ],
         "end": [
             407,
-            108,
+            308,
             1,
             1
         ],
@@ -163,7 +171,7 @@
         "timeout": 4000,
         "max_hit": 1,
         "action": "Swipe",
-        "end_hold": 2000,
+        "end_hold": 500,
         "begin": [
             305,
             627,
@@ -181,6 +189,7 @@
         "timeout": 4000,
         "max_hit": 1,
         "action": "Swipe",
+        "post_delay": 200,
         "begin": [
             305,
             627,
@@ -194,10 +203,11 @@
             1
         ]
     },
-    "滑回最顶上": {
+    "检查_滑回最顶上": {
         "timeout": 4000,
         "max_hit": 1,
         "action": "Swipe",
+        "post_delay": 200,
         "begin": [
             311,
             181,
@@ -209,6 +219,9 @@
             592,
             1,
             1
+        ],
+        "next": [
+            "点一下海盗埃及"
         ]
     },
     "自动选择": {
@@ -218,7 +231,17 @@
         ],
         "action": "Click",
         "next": [
-            "开始探险"
+            "点叉"
+        ]
+    },
+    "点叉": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "叉叉.png"
+        ],
+        "action": "Click",
+        "next": [
+            "探索_回到顶部"
         ]
     },
     "开始探险": {
@@ -228,16 +251,6 @@
         ],
         "action": "Click",
         "on_error": []
-    },
-    "点击_海盗/埃及": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "海盗埃及（灰色）.png"
-        ],
-        "threshold": [
-            0.9
-        ],
-        "action": "Click"
     },
     "豌豆射手_开始": {
         "recognition": "TemplateMatch",

@@ -72,6 +72,7 @@
             "未来黑暗.png"
         ],
         "action": "Click",
+        "post_delay": 500,
         "threshold": [
             0.9
         ],
@@ -87,6 +88,7 @@
             "沙滩冰河.png"
         ],
         "action": "Click",
+        "post_delay": 500,
         "threshold": [
             0.9
         ],
@@ -103,6 +105,7 @@
             "天空失落.png"
         ],
         "action": "Click",
+        "post_delay": 500,
         "threshold": [
             0.9
         ],
@@ -118,6 +121,7 @@
             "摇滚恐龙.png"
         ],
         "action": "Click",
+        "post_delay": 500,
         "threshold": [
             0.9
         ],
@@ -133,6 +137,7 @@
             "摩登蒸汽.png"
         ],
         "action": "Click",
+        "post_delay": 500,
         "threshold": [
             0.9
         ],
@@ -151,6 +156,7 @@
             0.9
         ],
         "action": "Click",
+        "post_delay": 500,
         "next": [
             "[JumpBack]点击探险完成",
             "[JumpBack]滑动8",
@@ -165,6 +171,7 @@
         ],
         "pre_wait_freezes": 1000,
         "action": "Click",
+        "post_delay": 500,
         "threshold": [
             0.9
         ],
@@ -176,10 +183,12 @@
     //先检查一遍再找对应世界再找对应植物
     "点击探险完成": {
         "recognition": "TemplateMatch",
+        "pre_wait_freezes": 2000,
         "template": [
             "探险完成.png"
         ],
         "action": "Click",
+        "post_delay": 500,
         "next": [
             "完成探险"
         ],
@@ -192,12 +201,13 @@
         "template": [
             "探险完成_确定.png"
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 500
     },
     "检查完成": {
         "focus": "[color:darkgray]植物探险检查完成！[/color]",
         "next": [
-            "[JumpBack]滑回最顶上",
+            "[JumpBack]检查_滑回最顶上",
             "探索"
         ]
     },
@@ -240,18 +250,102 @@
             "[JumpBack]探索_石斛防风网",
             "[JumpBack]探索_千金藤",
             "[JumpBack]探索_海蘑菇",
-            "[JumpBack]探索_噗噗鱼藤"
+            "[JumpBack]探索_噗噗鱼藤",
+            "结束探索"
         ]
     },
     "探索_豌豆射手": {
-        "enabled": false,
+        "max_hit": 1,
         "next": [
-            "[JumpBack]点击_海盗/埃及",
-            "豌豆射手_开始"
+            "探索_豌豆射手世界页面"
+        ]
+    },
+    "探索_豌豆射手世界页面": {
+        "action": "DoNothing",
+        "next": [
+            "探索_豌豆射手选择世界"
+        ]
+    },
+    "探索_豌豆射手选择世界": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "海盗埃及.png",
+            "海盗埃及（灰色）.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "探索_豌豆射手页面"
+        ]
+    },
+    "探索_豌豆射手页面": {
+        "action": "DoNothing",
+        "next": [
+            "探索_豌豆射手区域"
+        ]
+    },
+    "探索_豌豆射手区域": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "开始.png"
+        ],
+        "roi": [
+            387,
+            171,
+            654,
+            153
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "自动选择"
         ]
     },
     "探索_卷心菜投手": {
         "enabled": false,
+    },
+    "探索_卷心菜投手世界页面": {
+        "action": "DoNothing",
+        "next": [
+            "探索_卷心菜投手选择世界"
+        ]
+    },
+    "探索_卷心菜投手选择世界": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "海盗埃及.png",
+            "海盗埃及（灰色）.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500,
+        "next": [
+            "探索_卷心菜投手页面"
+        ]
+    },
+    "探索_卷心菜投手页面": {
+        "action": "DoNothing",
+        "next": [
+            "探索_卷心菜投手区域"
+        ]
+    },
+    "探索_卷心菜投手区域": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "开始.png"
+        ],
+        "roi": [
+            388,
+            331,
+            654,
+            153
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "自动选择"
+        ]
     },
     "探索_向日葵": {
         "enabled": false,
@@ -360,5 +454,222 @@
     },
     "探索_噗噗鱼藤": {
         "enabled": false,
-    }
+    },
+    "探索_世界_第一页": {
+        "action": "DoNothing",
+        "next": []
+    },
+    "探索_世界_第二页": {
+        "action": "Swipe",
+        "begin": [
+            292,
+            637,
+            1,
+            1
+        ],
+        "end": [
+            280,
+            116,
+            1,
+            1
+        ],
+        "end_hold": 500,
+        "post_delay": 1000,
+        "next": []
+    },
+    "探索_世界_第三页": {
+        "action": "Swipe",
+        "begin": [
+            292,
+            637,
+            1,
+            1
+        ],
+        "end": [
+            280,
+            116,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "next": []
+    },
+    "探索_页面第一页": {
+        "action": "DoNothing",
+        "next": []
+    },
+    "探索_页面第二页": {
+        "action": "Swipe",
+        "begin": [
+            660,
+            637,
+            1,
+            1
+        ],
+        "end": [
+            678,
+            159,
+            1,
+            1
+        ],
+        "end_hold": 500,
+        "post_delay": 1000,
+        "next": []
+    },
+    "探索_区域一": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "开始.png"
+        ],
+        "roi": [
+            387,
+            171,
+            654,
+            153
+        ],
+        "action": "Click",
+        "post_delay": 500
+    },
+    "探索_区域二": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "开始.png"
+        ],
+        "roi": [
+            388,
+            331,
+            654,
+            153
+        ],
+        "action": "Click",
+        "post_delay": 500
+    },
+    "探索_区域三": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "开始.png"
+        ],
+        "roi": [
+            385,
+            488,
+            654,
+            153
+        ],
+        "action": "Click",
+        "post_delay": 500
+    },
+    "探索_回到顶部": {
+        "action": "Swipe",
+        "begin": [
+            678,
+            159,
+            1,
+            1
+        ],
+        "end": [
+            660,
+            637,
+            1,
+            1
+        ],
+        "post_delay": 1000,
+        "next": [
+            "点一下海盗埃及"
+        ]
+    },
+    "点一下海盗埃及": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "海盗埃及.png",
+            "海盗埃及（灰色）.png"
+        ],
+        "action": "Click",
+        "post_delay": 500
+    },
+    "探索_海盗埃及": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "海盗埃及.png",
+            "海盗埃及（灰色）.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
+    },
+    "探索_西部功夫": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "西部功夫.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
+    },
+    "探索_未来黑暗": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "未来黑暗.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
+    },
+    "探索_沙滩冰河": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "沙滩冰河.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
+    },
+    "探索_天空失落": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "天空失落.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
+    },
+    "探索_摇滚恐龙": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "摇滚恐龙.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
+    },
+    "探索_摩登蒸汽": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "摩登蒸汽.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
+    },
+    "探索_平安复兴": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "平安复兴.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
+    },
+    "探索_海底世界": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "海底世界.png"
+        ],
+        "action": "Click",
+        "pre_delay": 500,
+        "post_delay": 500
+    },
+    "无": {
+        "action": "DoNothing"
+    },
+    "结束探索": {}
 }
